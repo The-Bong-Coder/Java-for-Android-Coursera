@@ -1,0 +1,29 @@
+#The Birthday problem - auto graded#
+answer:
+ public double calculate(int size, int count) {
+        // TODO -- add your code here
+        int dupcount=0;
+        Random r = new Random();
+        for(int i=0;i<count;i++)
+        {
+            int arr[]=new int[365];
+            r.setSeed(i+1);
+            for(int j=0;j<size;j++)
+            {
+                int n=r.nextInt(365);
+                arr[n]++;
+                if(arr[n]>=2) {
+                    dupcount++;
+                    break;
+                }
+            }
+        }
+        return dupcount*100.0/count;
+
+    }
+        
+    }
+
+
+    // TODO -- add your helper methods here
+    
