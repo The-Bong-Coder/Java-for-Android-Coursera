@@ -385,6 +385,9 @@ private boolean mSecondFloor;
         this.mParkingSpaces = parkingSpaces;
         sTotalOffices++;
     }
+    public static int getTotalOffices() {
+        return sTotalOffices;
+    }
 
     //getters
     public String getBusinessName() {
